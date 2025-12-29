@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "d2df5acc-c04e-4256-8d36-7e64d294d032",
+		"name": "CRUD Vuelos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50755821",
+		"_collection_link": "https://abraham-ps-3086207.postman.co/workspace/Abraham's-Workspace~bea184e2-0ba5-4e6a-8100-85f026ed5d43/collection/50755821-d2df5acc-c04e-4256-8d36-7e64d294d032?action=share&source=collection_link&creator=50755821"
+	},
+	"item": [
+		{
+			"name": "CRUD Basico",
+			"item": [
+				{
+					"name": "Todos",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "por ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreVuelo\": \"VL110\",\r\n    \"empresa\": \"Hack A Boss Airlines\",\r\n    \"lugarSalida\": \"Madrid (MAD) \",\r\n    \"lugarLlegada\": \"Roma (FCO)\",\r\n    \"fechaSalida\": \"2026-09-20\",\r\n    \"fechaLlegada\": \"2026-10-04\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/vuelos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vuelos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreVuelo\": \"VL110\",\r\n    \"empresa\": \"Hack A Boss Airlines\",\r\n    \"lugarSalida\": \"Madrid (MAD) \",\r\n    \"lugarLlegada\": \"Roma (FCO)\",\r\n    \"fechaSalida\": \"2026-09-20\",\r\n    \"fechaLlegada\": \"2026-10-04\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/vuelos/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vuelos",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Filtros",
+			"item": [
+				{
+					"name": "por Empresa",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "por Lugar Llegada",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "por Fecha Salida",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "por Combinados",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ordenamiento",
+			"item": [
+				{
+					"name": "por Empresa (ASC)",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "por Empresa (DESC)",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "por Lugar Llegada (ASC)",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "por Lugar Llegada (DESC)",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Combinado",
+			"item": [
+				{
+					"name": "Filtros + Ordenamiento",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
