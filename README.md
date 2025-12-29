@@ -25,21 +25,25 @@ Se trabaja con fechas usando `LocalDate`, validaciones básicas, filtros y orden
 ---
 
 ## Endpoints
-### CRUD
-- `GET /vuelos`
-- `GET /vuelos/{id}`
-- `POST /vuelos`
-- `PUT /vuelos/{id}`
-- `DELETE /vuelos/{id}`
-
-### Filtros (combinables)
-- `GET /vuelos?empresa=Turkish`
-- `GET /vuelos?lugarLlegada=Nueva%20York%20(JFK)`
-- `GET /vuelos?fechaSalida=2026-01-20`
-
-### Ordenamiento (bonus)
+### CRUD Básico
+- `GET /vuelos` (Todos)
+- `GET /vuelos/{id}` (Por ID)
+- `POST /vuelos` (Crear)
+- `PUT /vuelos/{id}` (Actualizar)
+- `DELETE /vuelos/{id}` (Eliminar)
+### Filtros
+- `GET /vuelos?empresa=Turkish` (Por empresa)
+- `GET /vuelos?lugarLlegada=Nueva%20York%20(JFK)` (Por lugar llegada)
+- `GET /vuelos?fechaSalida=2026-01-20` (Por fecha salida)
+- `GET /vuelos?empresa=...&lugarLlegada=...&fechaSalida=...` (Combinados)
+### Ordenamiento
+(Por orden ASCENDENTE y DESCENDENTE)
 - `GET /vuelos?ordenarPor=empresa&orden=ASC`
+- `GET /vuelos?ordenarPor=empresa&orden=DESC`
+- `GET /vuelos?ordenarPor=lugarLlegada&orden=ASC`
 - `GET /vuelos?ordenarPor=lugarLlegada&orden=DESC`
+### Combinado
+- `GET /vuelos?empresa=...&lugarLlegada=...&ordenarPor=...&orden=...` (Filtros + Ordenamiento)
 
 ---
 
